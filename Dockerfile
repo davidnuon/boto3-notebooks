@@ -10,5 +10,4 @@ COPY requirements.txt /tmp
 RUN apt-get update
 RUN apt-get -y install texlive-full
 RUN pip3 install -r /tmp/requirements.txt
-ENTRYPOINT python -m jupyter notebook --allow-root --port=8888 --ip=0.0.0.0
-notebook
+ENTRYPOINT python -m jupyter notebook --allow-root --port=8888 --ip=0.0.0.0 notebooks
