@@ -8,6 +8,6 @@ COPY requirements.txt /tmp
 
 # Install LaTeX
 RUN apt-get update
-RUN apt-get -y install texlive-full
+RUN apt-get -y install texlive-full vim
 RUN pip3 install -r /tmp/requirements.txt
-ENTRYPOINT python -m jupyter notebook --allow-root --port=8888 --ip=0.0.0.0 notebooks
+ENTRYPOINT python -m jupyter notebook --allow-root --port=8888 notebooks
